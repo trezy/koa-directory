@@ -1,0 +1,42 @@
+<main>
+  <div class="breadcrumbs">
+    Current Directory:
+    {{#each breadcrumbs}}
+      <span>
+        {{#if path}}
+          <a href="/directory?parent={{path}}">{{name}}</a>
+        {{else}}
+          {{name}}
+        {{/if}}
+      </span>
+    {{/each}}
+  </div>
+
+  <ul>
+    {{#if parentDirectory}}
+      <li>
+        <span>
+          <i class="fa fa-folder"></i> <a href="/directory?parent={{parentDirectory}}">..</a>
+        </span>
+      </li>
+    {{/if}}
+
+    {{#each structure}}
+      <li>
+        <span>
+          {{#if isDirectory}}
+            <i class="fa fa-folder"></i>
+
+            <a href="directory?parent={{relativePath}}">{{name}}</a>
+          {{else}}
+            <i class="fa fa-file-o"></i>
+
+            {{name}}
+          {{/if}}
+        </span>
+
+        <span class="size">{{size}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</main>

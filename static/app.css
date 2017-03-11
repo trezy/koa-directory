@@ -1,0 +1,48 @@
+html,
+body {
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+li:nth-child(even) {
+  background-color: hsl(0, 0%, 95%);
+}
+
+li i {
+  margin-right: 1rem;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs span {
+  display: flex;
+}
+
+.breadcrumbs span:before {
+  content: '/';
+  margin: 0 0.5rem;
+}
+
+.size {}
